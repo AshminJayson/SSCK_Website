@@ -7,17 +7,17 @@
   <link rel="stylesheet" href="../dist/output.css">
   <title>SSCK</title>
 </head>
-<body>
+<body class="bg-black">
     <section id="hero" class="h-fullvh">
         <img src="../assets/images/heroimage.jpg" class="h-fullvh w-full z-50" alt="" srcset="">
         <div id="herooverlay" class="opacity-40 bg-black absolute top-0 h-fullvh w-full">
         </div>
         <div id="herooverlaytext" class="absolute top-0 h-fullvh w-full flex flex-col justify-center items-center">
-            <p class="text-white text-5xl lg:text-7xl font-sacramento tracking-wider text-center leading-90">The Lord is my shepherd, <br> I shall not want</p>
+            <p class="text-white text-5xl lg:text-7xl font-sacramento tracking-wider text-center leading-[90px]">The Lord is my shepherd, <br> I shall not want</p>
         </div>        
             
         <nav class="flex flex-row p-5 justify-between items-center absolute top-0 w-full">
-            <img src="../assets/images/churchlogo.png" class="w-70 lg:w-100" alt="">
+            <img src="../assets/images/churchlogo.png" class="w-[70px] lg:w-[100px]" alt="">
             <ul class="sm:flex flex-row space-x-6 font-sacramento hidden  text-white lg:text-xl p-5">
                 <li><a href="">About Us</a></li>
                 <li><a href="">Parish Directory</a></li>
@@ -25,14 +25,77 @@
                 <li><a href="">Community Services</a></li>
             </ul>
         </nav>
-   
+        
+    </section>
+    
+    
+    <div id="eventcard" class=" mx-auto flex flex-col gap-2 items-center relative z-0 bg-white -mt-14 p-4 w-3/4 rounded-2xl">
+        <p class="tracking-[1.2em] text-[10px] font-medium font-roboto">UPCOMING EVENTS</p>
+        <div class="event flex justify-center items-center gap-[4rem] h-[100px]">
+            <div id="date" class="flex flex-col items-center p-3 bg-[#1E4E66] w-[9rem] h-[5rem]">
+                <p class="event_month font-kalam text-3xl text-white">Feb</p>
+                <p class="event_date font-kalam text-2xl text-white tracking-[.5rem]">4-5</p>
+            </div>
+            <p class="font-serif text-[2.5rem]">FEAST OF ST. SEBASTIAN</p>
+            <div id="expandbutton" class="bg-[#1E4E66] h-[3.8rem] w-[3.8rem] rounded-[1.9rem]"></div>
+        </div>
+    </div>
 
-        <div id="event" class="flex justify-center">
-            <div id="eventcard" class="relative z-0 bg-white -mt-14 p-3 h-28 w-3/4 rounded-2xl">
-                
+
+    <div id="masstimings" class="bg-black flex flex-col items-center py-20 gap-4 text-white">
+
+        <h3 class="font-serif text-4xl">Mass Timings</h3>
+        <p class="text-2xl font-light"><span class="text-red-600">Sundays</span> : 7.15 am and 10.15 am @ Church</p>
+        <p class="text-2xl font-light"><span class="text-blue-500">Weekdays and Saturday</span> : 6:45 am @ Convent Chapel</p>
+        <p class="text-md font-light">Mass Timing are subject to vary on holy days of obligation and feasts</p>
+    </div>
+
+    <section id="about" class="relative py-20 bg-[#F0EEE9]">
+        <div id="churchdetails" class="grid grid-cols-2 place-items-center">
+            <div class="flex flex-col justify-center items-center gap-10">
+                <h3 class="font-serif italic text-4xl font-bold">Our Church</h3>
+                <p class="text-2xl font-kalam px-20 text-center">Blessed by the Rev Bishop Anon on the 8th of March 1983, 
+                    Our Parish began construction soon after, the church as 
+                    of today has undergone various construction projects
+                    those which have added to it’s beauty and it’s purpose 
+                    as a center of  praise and worship.</p>
+                <button class="button px-5 py-2 border-2 border-black font-bold">PARISH GALLERY</button>
+            </div>
+            <img src="../assets/images/churchfront.jpg" alt="" class="w-[500px] h-[400px] place-self-end">
+        </div>
+        <img src="../assets/images/overlay2.png" alt="" class="absolute w-6/12 h-3/6 object-contain top-0 left-0 -rotate-90 opacity-50">
+        
+        <div id="vicardetails" class="mt-32">
+            <h3 class="font-serif italic text-4xl font-bold text-center">Our Vicar</h3>
+            
+            <div class="grid grid-cols-2 place-items-center py-10">
+                <div class="relative w-6/12">
+                    <img src="../assets/images/Fr. Robin Padinjarekuttu.jpg" alt="" class="w-[320px] h-[320px] rounded-[160px]">
+                    <!-- <img src="../assets/images/overlay1.png" alt="" class="h-[400px] w-[1000px] object-cover absolute"> -->
+                </div>
+                <p class="text-2xl font-kalam px-20 text-center">
+                    Our Vicar, Fr. Robin Padinjarekuttu is a man devoted to the praise of  god in all his endeavors.
+                    He is the driving force behind the parish and the corner stone of the spiritual as well as humanitarian activities of the parish.
+                </p>
             </div>
         </div>
+            
+        <img src="../assets/images/overlay2.png" alt="" class="absolute w-6/12 h-3/6 object-contain bottom-0 right-0 rotate-90 opacity-50">
+        
     </section>
 
+    <div class="text-white text-center p-12">
+        <p class="text-4xl font-sacramento">In that little host is the solution to all problems of the world</p>
+        <p class="text-l font-serif"> ~ St.John Paul II</p>
+    </div>
+
+    <section id="videos" class="bg-white flex flex-col items-center justify-center font-kalam text-xl">
+
+        <p class="">OUR RECENT UPLOADS</p>
+
+        
+        <p>OUR OTHER UPLOADS</p>
+
+    </section>
 </body>
 </html>
