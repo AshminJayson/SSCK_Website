@@ -7,15 +7,19 @@ module.exports = {
       height: {
         fullvh : "100vh"
       },
-
-
+      
+      
       fontFamily:{
         sacramento : ["Sacramento", "sans-serif"],
         roboto : ["Roboto", "sans-serif"],
         kalam: ["Kalam", "sans-serif"],
       },
-
-
+      
+  
+      screens: {
+        'mlg' : {'max' : '1024px'},
+      },
+      
     },
   },
   plugins: [],
