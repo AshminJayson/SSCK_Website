@@ -8,10 +8,12 @@
   <link href="/dist/output.css" rel="stylesheet">
   <link rel="stylesheet" href="../dist/output.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  
+    <link rel="stylesheet" href="./output.css">
   
   <script defer src="https://kit.fontawesome.com/661643eedb.js" crossorigin="anonymous"></script>
   <script defer src="../dist/script.js"></script>
+  <script defer src="./script.js"></script>
+  
   
   <title>SSCK</title>
 </head>
@@ -21,32 +23,34 @@
         <img src="../assets/images/heroimage.jpg" class="h-fullvh w-full" alt="" srcset="">
         <div id="herooverlay" class="opacity-40 bg-black absolute top-0 h-fullvh w-full">
         </div>
-        <div id="herooverlaytext" class="absolute top-0 h-fullvh w-full flex flex-col justify-center items-center">
-            <p class="text-white text-5xl lg:text-8xl font-sacramento tracking-wider text-center leading-[90px] transition-all duration-[1.5s]">The Lord is my shepherd, <br> I shall not want</p>
+        <div id="herooverlaytext" class="animate__animated animate__fadeInUp absolute top-0 h-fullvh w-full flex flex-col justify-center items-center">
+            <p class="text-white text-8xl font-sacramento tracking-wider text-center leading-[90px] transition-all duration-[1.5s]">The Lord is my shepherd, <br> I shall not want</p>
         </div>        
-            
+        
+
         <nav class="flex flex-row p-5 justify-between items-center absolute top-0 w-full">
             <img src="../assets/images/churchlogo.png" class="w-[70px] lg:w-[100px]  transition-all duration-[1.5s]" alt="">
-            <ul class="sm:flex flex-row space-x-6 font-sacramento hidden text-white lg:text-xl p-5">
-                <li><a href="">About Us</a></li>
-                <li><a href="">Parish Directory</a></li>
-                <li><a href="">Gallery</a></li>
-                <li><a href="">Community Services</a></li>
+            <button aria-expanded = "false" class="nav-toggle font-sacramento text-white"></button> 
+            <ul data-visible = "false" class="primary-navigation flex flex-row gap-4 font-sacramento text-white text-xl p-5">
+                <li><a class="nav-link" href="#about">About Us</a></li>
+                <li><a class="nav-link" href="">Parish Directory</a></li>
+                <li><a class="nav-link" href="">Gallery</a></li>
+                <!-- <li><a href="">Community Services</a></li> -->
             </ul>
         </nav>
         
     </section>
     
     
-    <div id="eventcard" class=" mx-auto flex flex-col gap-2 items-center relative bg-white -mt-14 p-4 w-3/4 rounded-2xl">
-        <p class="tracking-[1.2em] text-[10px] font-medium font-roboto">UPCOMING EVENTS</p>
-        <div class="event flex justify-center items-center gap-[4rem] h-[100px]">
+    <div id="eventcard" class="mx-auto flex flex-col gap-2 items-center relative bg-white -mt-14 p-4 w-3/4 rounded-2xl">
+        <p class="tracking-[1.2em] text-sm font-medium font-roboto">UPCOMING EVENTS</p>
+        <div class="event flex justify-center items-center gap-[4rem] h-[6.25rem]">
             <div id="date" class="flex flex-col items-center p-3 bg-[#1E4E66] w-[9rem] h-[5rem]">
                 <p class="event_month font-kalam text-3xl text-white">Feb</p>
                 <p class="event_date font-kalam text-2xl text-white tracking-[.5rem]">4-5</p>
             </div>
             <p class="font-serif text-[2.5rem]">FEAST OF ST. SEBASTIAN</p>
-            <div id="expandbutton" class="bg-[#1E4E66] h-[3.8rem] w-[3.8rem] rounded-[1.9rem] flex justify-center items-center">
+            <div id="expandbutton" class="bg-[#1E4E66] h-[3.8rem] w-[3.8rem] rounded-[1.9rem] flex justify-center items-center flex-shrink-0">
                 <span class="text-white"><i class="fa-solid fa-arrow-right fa-2xl"></i></span>
             </div>
         </div>
@@ -61,8 +65,8 @@
         <p class="text-md font-light">Mass Timing are subject to vary on holy days of obligation and feasts</p>
     </div>
 
-    <section id="about" class="relative py-20 bg-[#F0EEE9]">
-        <div id="churchdetails" class="grid grid-cols-2 place-items-center">
+    <section id="about" class="py-20 bg-[#F0EEE9]">
+        <div id="churchdetails" class="relative grid grid-cols-2 place-items-center">
             <div class="flex flex-col justify-center items-center gap-10">
                 <h3 class="font-serif italic text-4xl font-bold">Our Church</h3>
                 <p class="text-2xl font-kalam px-20 text-center">Blessed by the Rev Bishop Anon on the 8th of March 1983, 
@@ -70,18 +74,18 @@
                     of today has undergone various construction projects
                     those which have added to it’s beauty and it’s purpose 
                     as a center of  praise and worship.</p>
-                <button class="button px-5 py-2 border-2 border-black font-bold">PARISH GALLERY</button>
+                <button type="button" class=" px-5 py-2 border-2 border-black font-bold">PARISH GALLERY</button>
             </div>
-            <img src="../assets/images/churchfront.jpg" alt="" class="w-[500px] h-[400px] place-self-end">
+            <img id="churchimage" src="../assets/images/churchfront.jpg" alt="" class=" h-[25rem] place-self-end ">
+            <img src="../assets/images/overlay2.png" alt="" class="absolute w-[20rem] object-contain top-0 left-0 -rotate-90 opacity-50">
         </div>
-        <img src="../assets/images/overlay2.png" alt="" class="absolute w-6/12 h-3/6 object-contain top-0 left-0 -rotate-90 opacity-50">
         
-        <div id="vicardetails" class="mt-32">
+        <div id="vicardetails" class="mt-32 relative">
             <h3 class="font-serif italic text-4xl font-bold text-center">Our Vicar</h3>
             
-            <div class="grid grid-cols-2 place-items-center py-10">
-                <div class="relative w-6/12">
-                    <img src="../assets/images/Fr. Robin Padinjarekuttu.jpg" alt="" class="w-[320px] h-[320px] rounded-[160px]">
+            <div id="vicardetails" class="grid grid-cols-2 place-items-center py-10">
+                <div class="relative ">
+                    <img src="../assets/images/Fr. Robin Padinjarekuttu.jpg" alt="" class="w-[20rem] h-[20rem] rounded-[10rem] flex-shrink-0">
                     <!-- <img src="../assets/images/overlay1.png" alt="" class="h-[400px] w-[1000px] object-cover absolute"> -->
                 </div>
                 <p class="text-2xl font-kalam px-20 text-center">
@@ -89,9 +93,9 @@
                     He is the driving force behind the parish and the corner stone of the spiritual as well as humanitarian activities of the parish.
                 </p>
             </div>
+            <img src="../assets/images/overlay2.png" alt="" class="absolute w-[20rem] object-contain bottom-0 right-0 rotate-90 opacity-50">
         </div>
             
-        <img src="../assets/images/overlay2.png" alt="" class="absolute w-6/12 h-3/6 object-contain bottom-0 right-0 rotate-90 opacity-50">
         
     </section>
 
@@ -107,7 +111,7 @@
         <iframe title="recent upload" class="w-6/12 h-96 mlg:w-11/12" src="https://www.youtube.com/embed/lfkgRQQEHTE"></iframe>  
 
         <p class="my-8">OUR OTHER UPLOADS</p>
-        <div class="grid grid-cols-4">
+        <div id="otheruploads" class="grid grid-cols-4">
             <div class="p-4 border-r-2 border-black"><iframe class="w-full h-full" src="https://www.youtube.com/embed/f6NomCd4dc8" frameborder="0"></iframe></div>
             <div class="p-4 border-r-2 border-black"><iframe src="https://www.youtube.com/embed/bx0j5qudpFc" class="w-full h-full" frameborder="0"></iframe></div>
             <div class="p-4 border-r-2 border-black"><iframe src="https://www.youtube.com/embed/t1Ppf99zt5I" class="w-full h-full" frameborder="0"></iframe></div>
@@ -119,13 +123,13 @@
 
     <section id="contact">
 
-        <div class="w-full h-[600px] grid grid-cols-2 bg-[#F0EEE9]">
+        <div class="w-full h-[37rem] grid grid-cols-2 bg-[#F0EEE9]">
             <div id="connect" class="h-full relative">
                 <img src="../assets/images/overlay3.png" class="h-full object-fill" alt="" srcset="">
                 <div class="absolute top-0 w-full h-full flex flex-col py-10 justify-end gap-4">
                         <p class="font-serif text-3xl text-center">Connect with us on Social Media</p>
 
-                        <div class="flex gap-8 justify-center">
+                        <div id="links" class="flex gap-8 justify-center">
                             <a href=https://www.facebook.com/StSebastiansChurchKottappady"><img src="../assets/icons/facebook-app-icon.png" alt="" class="h-14 w-14"></a>
                             <a href="https://www.youtube.com/@st.sebastianschurchkottapp2635"><img src="../assets/icons/youtube-round-color-icon.png" alt="" class="h-14 w-14"></a>
                             <a href="https://www.instagram.com/kottappadycatholicchurch/"><img src="../assets/icons/ig-instagram-icon.png" alt="" class="h-14 w-14"></a>
@@ -146,11 +150,10 @@
             <p class="font-roboto font-normal text-right">
                 St. Sebastian’s Church Kottappady <br>
                 Kerala - 686 692 <br>
-                📞 +91 485 2822931 <br>
-                📞  8281824263 <br>
+                📞  9947933478 <br>
                 📨  kottappadycatholichurch@gmail.com
             </p>
-            <img src="../assets/images/churchlogo.png" class="w-[100px] lg:w-[120px]"alt="">
+            <img src="../assets/images/churchlogo.png" class="w-[7.5rem]" alt="">
         </div>
         <div class="p-3">
             <p class="text-xl tracking-widest font-sacramento text-white text-center">Made with 💖 by Ashmin Jayson</p>

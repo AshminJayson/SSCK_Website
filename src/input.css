@@ -1,8 +1,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+@import "animate.css";
+
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media screen and (max-device-width: 1024px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-device-width: 768px) {
+    html {
+        font-size: 65%;
+    }
+    
+    #vicardetails {
+        grid-template-columns: 1fr;
+        row-gap: 5rem;
+    }
+}
+
+.nav-toggle {
+    position: absolute;
+    z-index: 1001;
+    top: 3rem;
+    right: 3rem;
+    width: 5rem;
+    height: 5rem;
+    background: url('../assets/icons/hamburgermenu.png') round;
+    display: none;
+}
+
+
+@media screen and (max-device-width: 425px) {
+    html {
+        font-size: 45%;
+    }
+
+    .h-fullvh {
+        height: 60vh;
+    }
+
+    #churchdetails {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 10rem;
+    }
+
+    #churchimage {
+        width: 70vw;
+        margin: auto;
+    }
+
+    #otheruploads {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .primary-navigation {
+        z-index: 1000;
+        position: fixed;
+        inset: 0 0 0 0;
+        flex-direction: column;
+        margin: auto;
+        background: rgba(0, 0, 0, 0.803);
+        color: white;
+        padding-top: 20rem;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 3rem;        
+        gap: 5rem;
+        transform: translateX(100%);
+        transition: transform ease-in .2s;
+    }
+
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0);
+    }
+
+    .nav-toggle[aria-expanded='true'] {
+        background-image: url(../assets/icons/hamburgerclose.svg);
+        position: fixed;
+    }
+    .nav-toggle {
+        display: block;
+
+    }
+    
+    
+    @supports (backdrop-filter: blur(1rem)) {
+        .primary-navigation {
+            backdrop-filter: blur(1rem);
+        }
+    }
+    
+}
+
+
 
